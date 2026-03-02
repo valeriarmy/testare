@@ -34,10 +34,10 @@ public class FormTest {
     public static String CITY = "Jaipur";
 
     @BeforeMethod
-    public void beforeMethod() {
+    public void beforeMethod() throws MalformedURLException {
         logger.info("Start Before Method");
 
-        driver = Driver.getAutoLocalDriver();  // ← changed from getRemoteDriver()
+        driver = Driver.getRemoteDriver();  // ← changed from getRemoteDriver()
         driver.manage().window().maximize();
     }
 
